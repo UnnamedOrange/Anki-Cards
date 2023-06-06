@@ -61,14 +61,14 @@ def make_line(word: str) -> str:
     html = fetch_html(word)
     phonogram = extract_phonogram(html)
     chinese = extract_chinese(html)
-    return f"{word}\t{phonogram}\t{chinese}"
+    return f"{word}\t{phonogram}\t{chinese}\t[sound:{word}.mp3]"
 
 
 def make_all_lines(words: list) -> str:
     """将单词列表转换为可导入 Anki 的纯文本。"""
     ret = ""
     ret += "# 由 UnnamedOrange 的制卡工具生成。\n"
-    ret += "# (1)英语单词\t(2)英美音标\t(3)中文释义\n"
+    ret += "# (1)英语单词\t(2)英美音标\t(3)中文释义\t(4)英语发音\n"
 
     success = 0
     for word in words:
