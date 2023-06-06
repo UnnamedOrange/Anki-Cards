@@ -1,0 +1,99 @@
+/* Font families */
+@font-face {
+    font-family: ChineseSerif;
+    src: url('_SourceHanSerifCN-Regular.otf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: JapaneseSerif;
+    src: url('_SourceHanSerifJP-Regular.otf');
+    font-display: swap;
+}
+
+.jp {
+    font-family: JapaneseSerif;
+}
+
+/* Card */
+.card {
+    font-family: ChineseSerif;
+    font-size: 24px;
+    text-align: center;
+    color: black;
+    background-color: white;
+}
+
+/* Utility */
+.unselectable {
+    -moz-user-select: none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Classes for main matter. */
+.basic_background {
+    color: #222;
+    background-color: rgb(245, 245, 245);
+}
+.nightMode .basic_background {
+    color: #eee;
+    background-color: #444;
+}
+
+.section_main {
+    font-size: 45px;
+    text-align: left;
+    padding: 8px;
+}
+.section_main .small {
+    font-size: 28px;
+}
+.section_info {
+    text-align: left;
+    padding: 8px;
+    padding-left: 12px;
+}
+.intonation {
+    font-size: 28px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.word_type_interval {
+    padding-right: 1em;
+}
+.word_type {
+    white-space: nowrap;
+}
+.voice {
+    font-size: 0px;
+}
+
+.border {
+    text-align: left;
+    font-size: 12px;
+    padding-left: 8px;
+}
+.kana {
+    color: #eee;
+    background-color: #888;
+}
+.furigana {
+    color: #666;
+    background-color: rgb(233, 233, 242);
+}
+.nightMode .furigana {
+    color: #666;
+    background-color: rgb(188, 188, 222);
+}
+.chinese {
+    color: #666;
+    background-color: rgb(242, 233, 233);
+}
+.nightMode .chinese {
+    color: #666;
+    background-color: rgb(222, 188, 188);
+}

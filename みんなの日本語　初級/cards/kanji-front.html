@@ -1,0 +1,25 @@
+<div class="border furigana">日文</div>
+<div class="basic_background section_main jp" style="display: flex; align-items: center;">
+    <span class="{{#是否需要缩小日文}}small{{/是否需要缩小日文}}" style="order: 1; flex: 1 1 auto;">
+        {{#是否需要从汉字到假名}}
+            {{kanji:日文}}
+            {{#基本形}}
+                <br/>
+                （←{{kanji:基本形}}）
+            {{/基本形}}
+        {{/是否需要从汉字到假名}}
+        {{^是否需要从汉字到假名}}
+            {{furigana:日文}}
+            {{#基本形}}
+                <br/>
+                （←{{kanji:基本形}}<span class="intonation">{{音调核}}</span>）
+            {{/基本形}}
+            {{^基本形}}
+                <span class="intonation">{{音调核}}</span>
+            {{/基本形}}
+        {{/是否需要从汉字到假名}}
+    </span>
+    {{^是否需要从汉字到假名}}
+        <span class="voice" style="order: 2;">{{音频}}</span>
+    {{/是否需要从汉字到假名}}
+</div>

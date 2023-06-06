@@ -1,0 +1,31 @@
+{{FrontSide}}
+
+<hr id=answer>
+
+<div class="border furigana">日文</div>
+<div class="basic_background section_info jp" style="display: flex; align-items: center;">
+	<span style="order: 1; flex: 1 1 auto;">
+		{{furigana:日文}}
+        {{#基本形}}
+            <br/>
+            （←{{furigana:基本形}}<span class="intonation">{{音调核}}</span>）
+        {{/基本形}}
+        {{^基本形}}
+            <span class="intonation">{{音调核}}</span>
+        {{/基本形}}
+        {{#词性}}
+            <span class="word_type_interval"></span>
+            <span class="jp word_type">
+                〈{{词性}}〉
+            </span>
+        {{/词性}}
+	</span>
+	<span class="voice" style="order: 2;">{{音频}}</span>
+</div>
+
+{{#外来语}}
+<div class="border kana">外来语</div>
+<div class="basic_background section_info">
+    {{外来语}}
+</div>
+{{/外来语}}

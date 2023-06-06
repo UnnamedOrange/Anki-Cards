@@ -1,0 +1,16 @@
+{{#是否需要从汉字到假名}}
+<div class="border kana">假名</div>
+<div class="basic_background section_main jp" style="display: flex; align-items: center;">
+    <span class="{{#是否需要缩小假名}}small{{/是否需要缩小假名}}" style="order: 1; flex: 1 1 auto;">
+        {{kana:日文}}
+        {{#基本形}}
+            <br/>
+            （←{{kana:基本形}}<span class="intonation">{{音调核}}</span>）
+        {{/基本形}}
+        {{^基本形}}
+            <span class="intonation">{{音调核}}</span>
+        {{/基本形}}
+    </span>
+    <span class="voice" style="order: 2;">{{音频}}</span>
+</div>
+{{/是否需要从汉字到假名}}

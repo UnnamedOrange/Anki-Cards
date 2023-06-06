@@ -1,0 +1,40 @@
+{{FrontSide}}
+
+<hr id=answer>
+
+<div class="border furigana">日文</div>
+<div class="basic_background section_info jp">
+    {{furigana:日文}}
+    {{#基本形}}
+        <br/>
+        （←{{furigana:基本形}}）
+    {{/基本形}}
+    {{#词性}}
+        <span class="word_type_interval"></span>
+        <span class="jp word_type">
+            〈{{词性}}〉
+        </span>
+    {{/词性}}
+</div>
+
+<div class="border chinese">中文</div>
+<div class="basic_background section_info">
+    <span>
+        {{中文}}
+    </span>
+    {{^是否需要从汉字到假名}}
+        {{#词性}}
+            <span class="word_type_interval"></span>
+            <span class="jp word_type">
+                〈{{词性}}〉
+            </span>
+        {{/词性}}
+    {{/是否需要从汉字到假名}}
+</div>
+
+{{#外来语}}
+<div class="border kana">外来语</div>
+<div class="basic_background section_info">
+    {{外来语}}
+</div>
+{{/外来语}}
