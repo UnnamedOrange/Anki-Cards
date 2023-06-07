@@ -21,8 +21,11 @@ def extract_phonogram(html: str) -> str:
         # 将音标的斜线替换为中括号。
         return f"[{phone.replace('/', '[').replace(' ', ']').replace('[', ' [')}]"
 
-    eng_phone = extract_original(soup.find_all("div", class_="per-phone")[0])
-    ame_phone = extract_original(soup.find_all("div", class_="per-phone")[1])
+    phone_divs = soup.find_all("div", class_="per-phone")
+    eng_phone = extract_original(phone_divs[0])
+    ame_phone = extract_original(
+        phone_divs[1] if len(phone_divs) > 1 else phone_divs[0]
+    )
     return f"英 {eng_phone} 美 {ame_phone}"
 
 
